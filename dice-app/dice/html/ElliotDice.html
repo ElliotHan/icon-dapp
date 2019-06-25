@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>diceRoll</title>
+        <style>
+            body {
+                position: relative;
+                background: center / cover no-repeat url('https://img.freepik.com/free-photo/pink-sakura-flower-cherry-blossom-himalayan-cherry-blossom_41389-461.jpg?size=626&ext=jpg');
+            }
+            #diceRoll {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                padding: 20px;
+                width: 100%;
+                background: rgba(255,255,255,.5);
+            }
+            #diceRoll__title {
+                font-size: 44px;
+                color: deeppink;
+            }
+            #diceRoll__guide {
+                position: relative;
+            }
+            #diceRoll__guide p {
+                margin: 0;
+                font-weight: bold;
+            }
+            #diceRoll__game {
+                /* display: inline-block; */
+                text-align: center;
+                width: 320px;
+                margin: 20px auto;
+            }
+            #diceRoll__dice {
+                background-color: navy;
+                width: 100px;
+                height: 100px;
+                border-radius: 20px;
+                color: white;
+                line-height: 100px;
+                font-size: 40px;
+                font-weight: bold;
+                margin: 0 auto 22px;
+            }
+            #diceRoll__input {
+                display: block;
+                width: 100%;
+                padding: 8px 12px;
+                border-radius: 7px;
+                margin-bottom: 10px;
+            }
+            #diceRoll__roll, #diceRoll__showResult {
+                padding: 10px;
+                /* width: 150px; */
+                width: 100%;
+                border-radius: 5px;
+                background: deeppink;
+                color: white;
+                font-size: 16px;
+                opacity: 0.5;
+                cursor: pointer;
+            }
+            #diceRoll__roll:hover {
+                opacity: 0.7;
+            }
+            #diceRoll__ryan {
+                position: relative;
+                width: 250px;
+                margin: 0 auto;
+            }
+            .diceRoll__result {
+                visibility: hidden;
+                position: absolute;
+                top: 30px;
+                left: 155px;
+                background: rgba(0,0,0,.01);
+                border: 0;
+                cursor: pointer;
+                outline: none;
+            }
+            .diceRoll__result--show {
+                visibility: visible;
+            }
+            #diceRoll__resultImg {
+                width: 250px;
+                height: 230px;
+                margin-bottom: 20px;
+            }
+            #diceRoll__resultNumber {
+                font-size: 50px;
+                color: deeppink;
+                font-weight: bold;
+            }
+            #diceRoll__resultStr {
+                width: 72px;
+                margin: 0 auto;
+                border: 1px solid deeppink;
+                border-radius: 5px;
+                padding: 3px;
+                background: deeppink;
+                color: white;
+            }
+            #diceRoll__resultStr:hover {
+                color: deeppink;
+                background: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="diceRoll">
+            <h2 id="diceRoll__title">Elliot Dice &hearts;</h2>
+            <div id="diceRoll__ryan">
+                <img id="diceRoll__resultImg" src="http://images.battlecomics.co.kr/users/329616/page/item/dfe609ce-a16d-4814-8211-3e0b64719023.jpg" />
+                <button id="result" class="diceRoll__result">
+                    <div id="diceRoll__resultNumber">?</div>
+                    <div id="diceRoll__resultStr">Show Result</div>
+                </button>
+            </div>
+            <div id="diceRoll__guide">
+                <div>아무것이나 입력해봐~&hearts;</div>
+                <p>WIN: 입력한 input기반으로 돌린 주사위의 숫자가 6인경우</p>
+                <p>LOSE: 입력한 input기반으로 돌린 주사위의 숫자가 6이 아닌 경우</p>
+            </div>
+            <div id="diceRoll__game">
+                <input id="diceRoll__input" type="text" placeholder="아무거나 입력해봐">
+                <button id="diceRoll__roll">Guess Dice Number</button>
+            </div>
+        </div>
+    </body>
+</html>
